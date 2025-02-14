@@ -16,52 +16,33 @@ A Flutter application demonstrating SOLID principles implementation in a payment
 
 ## SOLID Principles Implementation
 
-1. **Single Responsibility Principle**: Each payment class handles only one type of payment
-2. **Open/Closed Principle**: New payment methods can be added without modifying existing code
-3. **Liskov Substitution Principle**: All payment methods can be used interchangeably
-4. **Interface Segregation Principle**: Payment interface is simple and specific
-5. **Dependency Inversion Principle**: High-level modules depend on abstractions
+### Single Responsibility Principle (S)
+- Each payment class handles only one type of payment and has one specific responsibility
+- Payment methods are separated into individual classes
+- UI components are modularized into widgets
+- Theme handling is separated into a dedicated provider
 
-## Project Structure
+### Open/Closed Principle (O)
+- Payment system is extensible for new payment methods
+- New payment methods can be added without modifying existing code
+- Theme system can be extended without modifying existing code
+- New UI components can be added without changing existing ones
 
-lib/
-├── core/
-│ ├── constants/
-│ │ ├── app_colors.dart
-│ │ ├── app_text_styles.dart
-│ │ └── app_strings.dart
-│ ├── providers/
-│ │ └── theme_provider.dart
-│ └── themes/
-│ └── app_theme.dart
-├── features/
-│ └── payment/
-│ ├── data/
-│ │ └── models/
-│ │ └── payment_result.dart
-│ ├── domain/
-│ │ ├── entities/
-│ │ │ └── payment_method.dart
-│ │ └── repositories/
-│ │ └── payment_repository.dart
-│ ├── presentation/
-│ │ ├── screens/
-│ │ │ ├── payment_screen.dart
-│ │ │ └── payment_success_screen.dart
-│ │ └── widgets/
-│ │ ├── custom_text_field.dart
-│ │ ├── payment_button.dart
-│ │ └── payment_method_card.dart
-│ └── services/
-│ ├── cash_payment.dart
-│ ├── credit_payment.dart
-│ └── payment_processor.dart
-└── main.dart
+### Liskov Substitution Principle (L)
+- All payment methods implement the PaymentMethod interface
+- Payment methods can be used interchangeably
+- Theme components follow consistent patterns
 
+### Interface Segregation Principle (I)
+- Specific interfaces for different payment methods
+- Payment interface is simple and specific
+- Clear separation between UI and business logic
+- Modular widget structure
 
-
-
-## Implementation Details
+### Dependency Inversion Principle (D)
+- High-level modules depend on abstractions
+- Payment processing is decoupled from specific implementations
+- Theme system is abstracted through providers
 
 ### Payment Methods
 - `PaymentMethod`: Abstract class defining payment interface
