@@ -22,27 +22,47 @@ A Flutter application demonstrating SOLID principles implementation in a payment
 - UI components are modularized into widgets
 - Theme handling is separated into a dedicated provider
 
-### Open/Closed Principle (O)
+## Open/Closed Principle (O)
 - Payment system is extensible for new payment methods
 - New payment methods can be added without modifying existing code
 - Theme system can be extended without modifying existing code
 - New UI components can be added without changing existing ones
 
-### Liskov Substitution Principle (L)
+## Liskov Substitution Principle (L)
 - All payment methods implement the PaymentMethod interface
 - Payment methods can be used interchangeably
 - Theme components follow consistent patterns
 
-### Interface Segregation Principle (I)
+## Interface Segregation Principle (I)
 - Specific interfaces for different payment methods
 - Payment interface is simple and specific
 - Clear separation between UI and business logic
 - Modular widget structure
 
-### Dependency Inversion Principle (D)
+## Dependency Inversion Principle (D)
 - High-level modules depend on abstractions
 - Payment processing is decoupled from specific implementations
 - Theme system is abstracted through providers
+
+## 📱 Screenshots
+
+| Main Screen with Cash Dark                             | Main Screen with Cash Light                             |
+|--------------------------------------------------------|---------------------------------------------------------|
+| <img src="screenshots/main_cash_dark.png" width="250"> | <img src="screenshots/main_cash_light.png" width="250"> |
+
+| Main Screen with Card Dark                             | Main Screen with Card Light                           |
+|--------------------------------------------------------|----------------------------------------------|
+| <img src="screenshots/main_card_dark.png" width="250"> | <img src="screenshots/main_card_light.png" width="250"> |
+
+
+| Payment Success Screen Dark                                  | Payment Success Screen Light                            |
+|--------------------------------------------------------------|----------------------------------------------|
+| <img src="screenshots/payment_success_dark.png" width="250"> | <img src="screenshots/payment_success_light.png" width="250"> |
+
+| Payment Failed Screen Dark                                  | Payment Failed Screen Light                            |
+|-------------------------------------------------------------|----------------------------------------------|
+| <img src="screenshots/payment_failed_dark.png" width="250"> | <img src="screenshots/payment_failed_light.png" width="250"> |
+
 
 ### Payment Methods
 - `PaymentMethod`: Abstract class defining payment interface
